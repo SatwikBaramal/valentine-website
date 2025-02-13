@@ -6,7 +6,7 @@ function ThankYou({ onGoBack }) {
   return (
     <div className="thank-you-container">
       <img
-        src="./mypic.jpg"
+        src="public\mypic.jpg"
         alt="My Photo"
         className="thank-you-image"
       />
