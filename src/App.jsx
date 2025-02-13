@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [noCount, setNoCount] = useState(0)
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <div className="valentine-container">
+      <Analytics/>
       <Header/>
       {yesPressed ? (
         <>
