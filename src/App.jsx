@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import './App.css'
 import Header from './components/Header'
 import { Analytics } from "@vercel/analytics/react"
+import ThankYou from './components/ThankYou'
 
 function App() {
   const [noCount, setNoCount] = useState(0)
   const [yesPressed, setYesPressed] = useState(false)
   
+  useEffect(() => {
+    setYesPressed(false)
+  }, [])
+
   const yesButtonSize = 16 + noCount * 4
   
   const getNoButtonText = () => {
@@ -36,13 +41,17 @@ function App() {
       <Analytics/>
       <Header/>
       {yesPressed ? (
-        <>
-          <h1>Yay! ❤️</h1>
-          <h2>I knew you would say yes!</h2>
-        </>
+        <ThankYou onGoBack={() => setYesPressed(false)} />
       ) : (
         <>
-          <h1>Anca, will you be my Valentine?</h1>
+          <img
+          src="/anca.jpg"
+          alt="My GF"
+          className="thank-you-image"
+          style={{ marginBottom: '20px' }}
+        />
+          <h1>Anca</h1>
+          <h1> Will you be my Valentine?</h1>
           <div className="buttons-container">
             <button
               className="yes-button"

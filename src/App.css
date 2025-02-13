@@ -137,8 +137,35 @@ h2 {
 
 .name {
   font-family: 'Great Vibes', cursive;
-  color: white;
-  font-size: 3.5rem;
+  color: rgb(210, 48, 145);
+  font-size: 1.5rem;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.thank-you-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+.thank-you-image {
+  border: 5px solid #ff4081;
+  border-radius: 15px;
+  max-width: 300px;
+}
+
+.thank-you-text {
+  color: #ff4081;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 400px;
+  line-height: 1.4;
+}
+
+body, h1, h2, p, button {
+  font-family: 'Great Vibes', cursive;
 }
