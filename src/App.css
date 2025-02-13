@@ -114,17 +114,38 @@ h2 {
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
+  /* Make headers and buttons more adaptable */
   h1 {
     font-size: 2rem;
   }
-  
+
   .buttons-container {
     flex-direction: column;
+    align-items: center;
   }
   
   button {
-    padding: 12px 25px;
+    width: 100%;
+    max-width: 200px;
     font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  /* Make images responsive */
+  .thank-you-image {
+    max-width: 80%;
+    height: auto;
+  }
+}
+
+/* For very small devices, you can add more breakpoints if needed */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  .name {
+    font-size: 1.2rem;
   }
 }
 
@@ -169,3 +190,14 @@ h2 {
 body, h1, h2, p, button {
   font-family: 'Great Vibes', cursive;
 }
+
+/* html, body {
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; 
+}
+/* .valentine-container {
+  width: 100%;
+  max-width: 100%;
+  /* overflow-x: hidden; 
+} 
